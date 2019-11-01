@@ -4,8 +4,9 @@
           <div class="row justify-content-center">
               <?php wp_nav_menu( array(
                   'theme_location' => 'footer_nav',
-                  'container' => '',
-                  'menu_class' => 'footerNav'
+                  'container'      => '',
+                  'menu_class'     => 'footerNav',
+                  'walker'         => new WP_Bootstrap_Navwalker(),
               )); ?>
           </div>
       </div>

@@ -8,6 +8,9 @@ function addCustomThemeFiles_fabula(){
 };
 add_action('wp_enqueue_scripts', 'addCustomThemeFiles_fabula');
 
+add_theme_support( 'post-thumbnails',  array( 'post' ) );
+add_image_size('icon', 50, 50, true);
+
 function addCustomMenus_Fabula(){
         add_theme_support('menus');
         register_nav_menus( array(
@@ -15,17 +18,15 @@ function addCustomMenus_Fabula(){
           'footer_nav' => __('Footer Menu'),
           'side_nav' => __('Side Menu')
         ));
-
 }
 add_action('after_setup_theme', 'addCustomMenus_Fabula');
 
+add_theme_support('wp-block-styles');
 
 function register_navwalker(){
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 };
 add_action( 'after_setup_theme', 'register_navwalker' );
-
-
 
 function fabulaLogo() {
   add_theme_support('custom-logo');
