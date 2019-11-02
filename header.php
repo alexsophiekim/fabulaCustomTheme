@@ -7,8 +7,8 @@
   </head>
   <body>
     <?php if (has_nav_menu('top_nav')): ?>
-    <nav class="navbar navbar-expand-md navbar-light bg-light mainColour d-flex" role="navigation">
-         <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md navbar-light bg-light d-flex navColour" role="navigation">
+         <button class="navbar-toggler toggleBtn" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
          </button>
            <?php  the_custom_logo('fabulaLogo'); ?>

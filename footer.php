@@ -1,5 +1,5 @@
 <?php if(has_nav_menu( 'footer_nav' )): ?>
-  <footer class="bg-dark text-white p-5 mt-5">
+  <footer class="text-white p-2">
       <div class="container">
           <div class="row justify-content-center">
               <?php wp_nav_menu( array(
@@ -9,6 +9,9 @@
                   'walker'         => new WP_Bootstrap_Navwalker(),
               )); ?>
           </div>
+          <?php if (get_theme_mod('fabula_theme_copyright')): ?>
+                <p class="text-center"><?php echo get_theme_mod('fabula_theme_copyright') ?></p>
+          <?php endif; ?>
       </div>
   </footer>
 <?php endif; ?>

@@ -7,7 +7,7 @@
   width: 30%;
   height: auto;
 }
-.mainColour{
+.navColour{
   background-color: #59caf9 !important;
 }
 #top_nav{
@@ -15,4 +15,18 @@
 }
 .footerNav{
     list-style: none;
+}
+.toggleBtn{
+  right:10px;
+  position: absolute;
+}
+.about-bg{
+  background-color: black;
+  color: #adb5bd;
+}
+.footerNav a{
+  color: black;
+}
+.slideImg{
+  max-height: 350px;
 }

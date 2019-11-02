@@ -21,6 +21,8 @@ function addCustomMenus_Fabula(){
 }
 add_action('after_setup_theme', 'addCustomMenus_Fabula');
 
+add_theme_support('post-formats', array('video','audio','image','gallery'));
+
 add_theme_support('wp-block-styles');
 
 function register_navwalker(){
@@ -33,3 +35,5 @@ function fabulaLogo() {
 };
 add_action('after_setup_theme', 'fabulaLogo');
 add_image_size('fabulaLogo', 200, 100);
+
+require( get_template_directory() . '/inc/customizer.php' );
