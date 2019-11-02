@@ -14,7 +14,8 @@
   justify-content: flex-end;
 }
 .footerNav{
-    list-style: none;
+  list-style: none;
+  display: flex;
 }
 .toggleBtn{
   right:10px;
@@ -29,15 +30,20 @@
 }
 .slideImg{
   max-height: 450px;
-  display: box;
-  display: flex;
-  box-align: center;
-  align-items: center;
-  box-pack: center;
-  justify-content: center;
+  display: block;
+}
+.carouselBox{
+  position: relative;
+  width: 100%;
 }
 .contentText{
   z-index: 1 !important;
-  top: 40%;
-  transform: translateX(30%);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-shadow: white 3px 3px;
+
 }
