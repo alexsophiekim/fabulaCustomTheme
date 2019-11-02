@@ -28,5 +28,16 @@
   color: black;
 }
 .slideImg{
-  max-height: 350px;
+  max-height: 450px;
+  display: box;
+  display: flex;
+  box-align: center;
+  align-items: center;
+  box-pack: center;
+  justify-content: center;
+}
+.contentText{
+  z-index: 1 !important;
+  top: 40%;
+  transform: translateX(30%);
 }

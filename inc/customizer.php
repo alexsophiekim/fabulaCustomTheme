@@ -34,28 +34,36 @@
      'settings'   => 'fabula_theme_copyright'
   ));
   $wp_customize->add_section('fabula_slideshow', array(
-       'title'             => __('Slider Images', 'fabulaCustom'),
-       'priority'          => 70,
+       'title'            => __('Slider Images', 'fabulaCustom'),
+       'priority'         => 70,
    ));
   $wp_customize->add_setting('fabula_contentImg_1', array(
-       'transport'         => 'refresh',
-       'height'            => 325,
+       'transport'        => 'refresh',
+       'height'           => 325,
   ));
   $wp_customize->add_setting('fabula_contentImg_2', array(
-       'transport'         => 'refresh',
-       'height'            => 325,
+       'transport'        => 'refresh',
+       'height'           => 325,
+  ));
+  $wp_customize->add_setting('fabula_contentText', array(
+      'default'           => 'Fabula Botanical Skincare',
+      'transport'         => 'refresh',
   ));
   $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'fabula_contentImg_1', array(
-       'label'             => __('Slider Image #1', 'fabulaCustom'),
-       'section'           => 'fabula_slideshow',
-       'settings'          => 'fabula_contentImg_1',
+       'label'            => __('Slider Image #1', 'fabulaCustom'),
+       'section'          => 'fabula_slideshow',
+       'settings'         => 'fabula_contentImg_1',
    )));
    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'fabula_contentImg_2', array(
-       'label'             => __('Slider Image #2', 'fabulaCustom'),
-       'section'           => 'fabula_slideshow',
-       'settings'          => 'fabula_contentImg_2',
+       'label'            => __('Slider Image #2', 'fabulaCustom'),
+       'section'          => 'fabula_slideshow',
+       'settings'         => 'fabula_contentImg_2',
    )));
-
+   $wp_customize->add_control('fabula_contentText', array(
+      'label'      => __('Content Text', 'fabulaCustom'),
+      'section'    => 'fabula_slideshow',
+      'settings'   => 'fabula_contentText'
+   ));
 }
 
 add_action( 'customize_register', 'mytheme_customize_register' );

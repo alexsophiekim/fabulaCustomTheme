@@ -2,7 +2,6 @@
 
     <div class="container my-3">
         <div class="row">
-
             <?php if (has_post_thumbnail()): ?>
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <?php if(!is_home()):?>
