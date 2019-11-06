@@ -36,4 +36,29 @@ function fabulaLogo() {
 add_action('after_setup_theme', 'fabulaLogo');
 add_image_size('fabulaLogo', 200, 100);
 
+function add_custom_post_types(){
+    $args = array(
+        'labels' => array(
+            'name' => 'Soaps',
+            'singular_name' => 'Soap',
+            'add_new_item' => 'Add New Product'
+        ),
+        'public' => true,
+        'hierarchical' => true,
+        'show_in_nav_menus' => false,
+        'show_in_rest' => false,
+        'menu_position' => 6,
+        'menu_icon' => 'dashicons-store',
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail',
+            'post-formats'
+        ),
+        'delete_with_user' => false
+    );
+    register_post_type('soaps', $args);
+}
+add_action('init', 'add_custom_post_types');
+
 require( get_template_directory() . '/inc/customizer.php' );
